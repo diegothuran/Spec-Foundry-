@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "project_id": "project-id",
+  "project_name": "{{PROJECT_NAME}}",
+  "revision": "r001",
+  "scope": "{{SCOPE}}",
+  "language": "pt-BR",
+  "readiness": "discovery",
+  "sources": [],
+  "evidence": [],
+  "claims": [],
+  "requirements": [],
+  "decisions": [],
+  "tasks": [],
+  "risks": [],
+  "questions": [],
+  "conflicts": [],
+  "eval_cases": [],
+  "artifacts": [],
+  "semantic_reviews": [],
+  "approvals": []
+}

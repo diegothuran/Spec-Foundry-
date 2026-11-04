@@ -1,0 +1,4 @@
+Definição A: O agente deve apenas consultar registros. Toda operação de escrita está fora da POC.
+Definição B: O agente deve corrigir automaticamente os dados divergentes na base.
+As duas definições foram enviadas pelos interessados e ainda não houve decisão de precedência.
+Não escolha qual delas vale sem perguntar ao responsável pelo recorte.

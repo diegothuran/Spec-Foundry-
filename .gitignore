@@ -1,0 +1,33 @@
+# Python e ferramentas
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Artefatos de distribuição gerados
+/dist/
+/MANIFEST-KIT.json
+*.zip
+*.skill
+
+# Dados específicos de projetos/clientes
+/projects/
+/inputs/
+/uploads/
+/exports/
+/checks/
+
+# Segredos e certificados
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Arquivos locais de editores e sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

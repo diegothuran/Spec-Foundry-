@@ -1,0 +1,6 @@
+Projeto sintético: Portal de Documentos.
+Uma equipe pequena deve disponibilizar documentos privados aos clientes.
+O usuário deve visualizar somente os documentos do próprio projeto.
+A equipe precisa saber quando um arquivo foi disponibilizado.
+Não escolhemos stack, serviço de armazenamento ou política de retenção.
+Queremos uma fundação para uma POC, não a aplicação pronta.

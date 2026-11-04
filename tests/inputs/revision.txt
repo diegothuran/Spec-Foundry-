@@ -1,0 +1,4 @@
+Mudança proposta para r002 do Portal de Documentos: adicionar uma prévia de upload antes da disponibilização.
+Manter o isolamento de projetos e o acesso somente autorizado.
+Não mudar automaticamente a stack nem a política de retenção.
+A aprovação que eventualmente exista em r001 não aprova esta revisão r002.
