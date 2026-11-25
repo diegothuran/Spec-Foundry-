@@ -2,9 +2,31 @@
 
 Skill para transformar definições de projetos em texto, imagens e PDFs em uma fundação rastreável de specs e eval specs para outra IA implementar. Não implementa o produto-alvo, não escolhe stack por herança e não transforma testes planejados em resultados aprovados.
 
-A skill está em [`spec-foundry/`](spec-foundry/). O [guia de montagem](GUIA-MONTAGEM.md) explica instalação no Claude de navegador e Claude Code, prompts de uso e manutenção. Veja também as [verificações locais](CHECKS-LOCAIS.md).
+A skill está em [`spec-foundry/`](spec-foundry/) (v1: especificação rigorosa, não implementa) e em [`spec-foundry-v2/`](spec-foundry-v2/) (v2: especificação **e** fundação executável, com rastreabilidade REQ→eval→teste). O [guia de montagem](GUIA-MONTAGEM.md) explica instalação no Claude de navegador e Claude Code, prompts de uso e manutenção. Veja também as [verificações locais](CHECKS-LOCAIS.md). E a [análise v1 → v2](ANALISE-V1-V2.md).
+
+## Duas versões, dois escopos
+
+| | `spec-foundry/` (v1) | `spec-foundry-v2/` (v2) |
+| --- | --- | --- |
+| Entrega | specs, eval specs, templates, schema | specs + **fundação de código executável** |
+| Eval | declarado, `not_run` por construção | executado em 3 camadas (pytest, contrato, artefato) |
+| Rastreabilidade | `REQ → EVAL` | `REQ → EVAL → teste → arquivo`, verificada por AST |
+| Assunção | implícita em `proposal` | entidade `ASM-*` com `impact` obrigatório |
+| Contrato | gerado quando o recorte sustenta | comparado com o OpenAPI **servido** |
+| Quando usar | especificação para outra IA implementar | especificação que precisa virar código verificável |
+
+A v2 não substitui a v1: cobre o trecho que a v1 deliberadamente não cobre. A [análise comparativa](ANALISE-V1-V2.md) lista também o que a v2 ainda deve à v1 (schema JSON do modelo, suíte de testes da própria skill).
 
 ## Conteúdo
+
+### v2 — `spec-foundry-v2/`
+
+- `SKILL.md`: cinco modos (criar, fundação, revisar, atualizar, avaliar) e a regra "evidência é execução".
+- `references/`: 12 referências, incluindo `foundation-mode.md` e `traceability.md`.
+- `scripts/`: `init_project.py`, `validate_package.py`, `check_traceability.py`, `run_evals.py`, `bundle_project.py`, `common.py`.
+- `templates/foundation/`: modelo, spec, casos de eval, ADR, manifest e `AGENTS.md`.
+
+### v1 — `spec-foundry/`
 
 - `spec-foundry/SKILL.md`: fluxo e ativação da skill.
 - `spec-foundry/references/`: evidências, discovery, contratos, evals, aprovação, revisões e guardrails.

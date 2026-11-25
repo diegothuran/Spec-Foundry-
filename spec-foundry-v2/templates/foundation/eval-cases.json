@@ -1,0 +1,30 @@
+{
+  "suite": "{{slug}}-{{release}}",
+  "version": "0.1.0",
+  "release": "{{release}}",
+  "notes": "Todo caso precisa de alvo executável: node_ids (target_system), assertions de contrato ou de arquivo.",
+  "cases": [
+    {
+      "id": "EVAL-001",
+      "req": "REQ-001",
+      "layer": "target_system",
+      "title": "Caminho feliz e violação",
+      "given": "estado inicial",
+      "when": "ação",
+      "then": "resultado observável",
+      "node_ids": ["tests/test_area.py::test_caminho_feliz"]
+    },
+    {
+      "id": "EVAL-002",
+      "req": "REQ-001",
+      "layer": "static",
+      "title": "Spec existe e cita o requisito",
+      "given": "docs/specs",
+      "when": "leitura do arquivo",
+      "then": "contém REQ-001",
+      "assertions": [
+        {"kind": "file_contains", "path": "foundation/{{release}}/docs/specs/01-primeira-spec.md", "needles": ["REQ-001"]}
+      ]
+    }
+  ]
+}

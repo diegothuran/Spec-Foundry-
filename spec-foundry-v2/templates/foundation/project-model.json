@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "project": {
+    "name": "{{slug}}",
+    "slug": "{{slug}}",
+    "release": "{{release}}",
+    "status": "discovery",
+    "purpose": "Uma frase sobre o que esta fundação prova."
+  },
+  "scope": {
+    "in_scope": ["O que esta release entrega"],
+    "out_of_scope": ["O que explicitamente não será feito nesta release"]
+  },
+  "entities": [],
+  "invariants": [],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Título verificável",
+      "layer": "domain",
+      "priority": "P0",
+      "spec": "docs/specs/01-primeira-spec.md",
+      "statement": "Condição de sucesso. Condição de erro explícita.",
+      "acceptance": ["caminho feliz observável", "violação produz erro tipado"]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "adr": "docs/adr/0001-primeira-decisao.md",
+      "title": "Decisão material",
+      "rationale": "Por que esta e não outra."
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "ASM-001",
+      "statement": "O que foi assumido sem fonte.",
+      "impact": "O que acontece se estiver errado.",
+      "validated_by": "REQ-001"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RSK-001",
+      "statement": "O que pode dar errado.",
+      "severity": "low",
+      "mitigation": "O que reduz o risco.",
+      "status": "open"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "Q-001",
+      "question": "O que ainda precisa de resposta.",
+      "blocking": false,
+      "status": "open",
+      "owner": "produto"
+    }
+  ],
+  "readiness": {"status": "discovery", "gates": []}
+}

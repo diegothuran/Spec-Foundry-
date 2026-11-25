@@ -1,0 +1,22 @@
+{
+  "release": "{{release}}",
+  "name": "{{slug}}",
+  "status": "discovery",
+  "created_at": "AAAA-MM-DD",
+  "suite_version": "0.1.0",
+  "requirements": 1,
+  "cases": 2,
+  "tests": 1,
+  "artifacts": [
+    {"path": "model/project-model.json", "kind": "model", "description": "Requisitos, decisões, assunções, riscos e gates."},
+    {"path": "docs/specs/01-primeira-spec.md", "kind": "spec", "description": "Primeira spec."},
+    {"path": "evals/cases.json", "kind": "evals", "description": "Casos executáveis."},
+    {"path": "contracts/openapi.json", "kind": "contract", "description": "Contrato exportado."}
+  ],
+  "evidence": {
+    "tests": 1,
+    "test_command": "python -m pytest",
+    "evals_report": "evals/reports/latest.json"
+  },
+  "out_of_scope": ["Substituir pelo fora de escopo real"]
+}
